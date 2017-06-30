@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="help2Content" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tutorial.HelpControlle">
+   <children>
+      <HBox alignment="CENTER" layoutX="250.0" layoutY="622.0" prefHeight="100.0" prefWidth="200.0" style="-fx-pref-width: 500;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#backBtnClick1" style="-fx-pref-width: 120; -fx-pref-height: 40;" text="Back">
+               <HBox.margin>
+                  <Insets right="100.0" />
+               </HBox.margin>
+            </Button>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#nextBtnClick2" style="-fx-pref-width: 120; -fx-pref-height: 40;" text="Next">
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Button layoutX="833.0" layoutY="43.0" mnemonicParsing="false" onAction="#backToStartBtnClick" style="-fx-pref-width: 120; -fx-pref-height: 40;" text="Back to Start" />
+      <Text layoutX="90.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Page 2">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

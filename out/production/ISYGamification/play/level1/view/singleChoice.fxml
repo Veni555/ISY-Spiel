@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" fx:controller="play.level1.controller.SingleChoiceLv1Controller" xmlns:fx="http://javafx.com/fxml/1" >
+    <children>
+        <VBox alignment="CENTER_LEFT" layoutX="103.0" layoutY="55.0" prefHeight="473.0" prefWidth="630.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Frage" fx:id="frages">
+                    <VBox.margin>
+                        <Insets bottom="20.0" top="-60.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <RadioButton fx:id="choice1" mnemonicParsing="false" onAction="#selectActionHandle" text="choice 1">
+                    <VBox.margin>
+                        <Insets bottom="15.0" />
+                    </VBox.margin>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="questionRadioGroup" />
+                    </toggleGroup>
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="choice2" mnemonicParsing="false" onAction="#selectActionHandle" text="choice 2" toggleGroup="$questionRadioGroup">
+                    <VBox.margin>
+                        <Insets bottom="15.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="choice3" mnemonicParsing="false" onAction="#selectActionHandle" text="choice 3" toggleGroup="$questionRadioGroup">
+                    <VBox.margin>
+                        <Insets bottom="15.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="choice4" mnemonicParsing="false" onAction="#selectActionHandle" text="choice 4" toggleGroup="$questionRadioGroup">
+                    <font>
+                        <Font size="18.0" />
+                    </font></RadioButton>
+                <HBox alignment="BOTTOM_RIGHT" prefHeight="164.0" prefWidth="630.0">
+                    <children>
+                        <Text fx:id="showResult" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="429.9140625">
+                            <font>
+                                <Font name="System Bold" size="28.0" />
+                            </font>
+                        </Text>
+                        <Button fx:id="submitBtn" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#submitActionHandle" prefHeight="34.0" prefWidth="128.0" style="-fx-pref-width: 90;" text="Submit">
+                            <font>
+                                <Font name="Calibri Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="goOnBtn" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#goOnClickHandle" style="-fx-pref-width: 90;" text="Weiter">
+                            <font>
+                                <Font name="Calibri Bold" size="18.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="5.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="-100.0" top="50.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER" layoutX="617.0" layoutY="31.0" prefHeight="98.0" prefWidth="169.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="31.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aktuelle Punkte" wrappingWidth="162.84765625">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Text>
+                <Label fx:id="aktPunkte" >
+                    <font>
+                        <Font size="28.0" />
+                    </font>
+                </Label>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </VBox>
+    </children>
+</AnchorPane>

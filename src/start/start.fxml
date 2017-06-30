@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="start.StartControlle" fx:id="startPage">
+   <children>
+      <VBox layoutX="621.0" layoutY="312.0" prefHeight="200.0" prefWidth="100.0" style="-fx-pref-width: 200; -fx-pref-height: 200;">
+         <children>
+            <Button alignment="BASELINE_CENTER" mnemonicParsing="false" style="-fx-pref-width: 190; -fx-pref-height: 60;" text="Start" textAlignment="CENTER" onAction="#startBtnClick">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="60.0" />
+               </VBox.margin>
+            </Button>
+            <Button alignment="BASELINE_CENTER" mnemonicParsing="false" style="-fx-pref-width: 190; -fx-pref-height: 60;" text="Hilfe" textAlignment="CENTER" onAction="#helpBtnClick">
+               <font>
+                  <Font name="Calibri Bold" size="32.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
