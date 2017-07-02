@@ -259,14 +259,14 @@ break;
         System.out.println("score2:" + punkte);
 
         // akualisiern Score im Aufgaben-Fenster
-      setPunkte(punkte);
+      setScore(punkte);
       aktPunkte.setText(String.valueOf(punkte));
 
     }
     public int getScore(){
     	return this.punkte;
     }
-    public void setPunkte(int punkte){
+    public void setScore(int punkte){
     	this.punkte=punkte;
     }
 

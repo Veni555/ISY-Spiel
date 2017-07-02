@@ -1,0 +1,78 @@
+1.Der Mensch verfügt über 5 bekannte Sine: Sehen, Hören, Riechen, Schmecken und Tasten. Das Liefern von Informationen ist aber nicht gleichmäßig zwischen allen 5 verteilt. 80% werden durch ____ erworben und somit ist es das am meisten in der Mensch Computer Interaktion umgesetzen Sensor. 
+1*Schmecken
+1$Sehen
+1@Hören
+1&Tasten
+1+Sehen
+2.Das menschliche Auge verfügt über 2 lichtempfindliche Rezeptoren und zwar ____ und ____. 
+2*Zapfen und Stäbchen
+2$Pupille und Stäbchen
+2@Iris und Zapfen
+2&Stäbchen und Iris
+2+Zapfen und Stäbchen
+3.95% aller Sehezellen des Auge sind Stäbchen. Sie sind ___ .
+3*Für das Sehen von Farben verantwortlich
+3$Nicht sehr empfindlich
+3@genau 3 Arten
+3&für die Graustufen verantwortlich
+3+für die Graustufen verantwortlich
+4.Die Zapfen, im Gegensatz zu den Stäbchen, sind ____ .
+4*für das Farbsehen verantwortlich
+4$durch eingebaute Farbpigmente für Rot, Grün und Gelb emfindlich
+4@für das Helligkeitsunterscheiden verantwortlich
+4&nur eine Art
+4+für das Farbsehen verantwortlich
+5.Offensichtlich sind die von dem mänschlichen Auge wahrgenommenen Farben mehr als die vorhandenen Zapfen Typen. Damit wir mehr als 3 Farben unterscheiden können, spricht man von ____ .
+5*Substraktiver Farbmischung
+5$Additiver Farbmischung
+5@Keine
+5&Beide
+5+Additiver Farbmischung
+6.Das menschliche Auge ist in seine Peripherie besonders auf Bewegungen empfindlich. Als Resultat kann man _____ betrachten.
+6*Den blinden Fleck
+6$Simultankontrast
+6@Flimmern
+6&Laterale Hemmung
+6+Flimmern
+7.Das Flimmern kann bei größeren Blidschirmen als störendes Effekt auftauchen. Um dies zu vermeiden setzt man für ergonomische Monitore eine untere Grenze von ___ .
+7*100Hz
+7$80Hz
+7@90Hz
+7&85Hz
+7+85Hz
+8.Bei der Gestaltung von Anwendungen kann die Umsetzung von sich bewegenden oder blikneden Objekten nützlich sein, da sie die Aufmerksamkeit direkt auf sich ziehen. Eine sinnvolle Umsetzung wäre zum Beispiel bei ____ .
+8*einem langen Textparagraph
+8$einem Fehlermeldung Fenster
+8@den Elementen eines Toolbars
+8&einem Start Button
+8+einem Fehlermeldung Fenster
+9.Die Okulomotorische Kriterien für Tiefensehen sind ___ .
+9*in 2D Bilder anzuwenden
+9$nur durch ein eiziges Auge zu ermitteln
+9@sowohl durch ein einziges Auge als auch mit den beiden Augen zu ermitteln
+9&nur mit den beiden Augen zu ermitteln
+9+nur mit den beiden Augen zu ermitteln
+10.Welche von den Folgenden Begriffen sind Gestaltgesetze?
+10*der Ähnlichkeit
+10$des Hermann-Gitters
+10@der lateralen Hemmung
+10&des Tiefensehens
+10+der Ähnlichkeit
+11.Beim Hooveren jedes Objektes einer Menüliste  wächselt die Hintergrungfarbe des Objekts von Wieß auf Blau, um zu deuten, dass das Objekt anclickbar ist. Welches Getsaltgesetzt erklärt am besten dieses Benehmen?
+11*der Nähe
+11$der Vertrautheit
+11@der guten Gestalt
+11&des gemeinsamen Schicksals
+11+des gemeinsamen Schicksals
+12.Welche Kriterien für das Tiefensehen sind bei dem Parallax Scrolling umgesetzt
+12*die okulomotorischen Kriterien
+12$die bewegungsindizierten Tiefenkriterien
+12@die Gestaltgesetze
+12&des statischen Sehens
+12+die bewegungsindizierten Tiefenkriterien
+13.Welcher von den folgenden Begriffen gehört nicht zu den monokularen Kriterien für Tiefsehen?
+13*Verdecken von Objekten
+13$relative Größe/Höhe im Blickfeld
+13@Bewegungsparallaxe
+13&Tiefenschärfe
+13+Bewegungsparallaxe
