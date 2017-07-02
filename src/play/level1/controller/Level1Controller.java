@@ -22,6 +22,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -46,20 +47,29 @@ public class Level1Controller extends Thread implements Initializable {
 	public int punkt;
 	@FXML
 	public Label frage;
+//	@FXML
+//	public RadioButton choice1;
+//	@FXML
+//	private RadioButton choice2;
+//	@FXML
+//	private RadioButton choice3;
+//	@FXML
+//	private RadioButton choice4;
+//	@FXML
+//	private ToggleGroup questionRadioGroup;
+//	@FXML
+//	private Text showResult;
+//	@FXML
+//	private Button submitBtn;
+
 	@FXML
-	public RadioButton choice1;
+	private Button answerABtn;
 	@FXML
-	private RadioButton choice2;
+	private Button answerBBtn;
 	@FXML
-	private RadioButton choice3;
+	private Button answerCBtn;
 	@FXML
-	private RadioButton choice4;
-	@FXML
-	private ToggleGroup questionRadioGroup;
-	@FXML
-	private Text showResult;
-	@FXML
-	private Button submitBtn;
+	private Button answerDBtn;
 	@FXML
 	private Button goOnBtn;
 	@FXML
@@ -214,6 +224,7 @@ public class Level1Controller extends Thread implements Initializable {
 					public void run() {
 						try {
 							setFragen(randQuestion);
+							goOnBtn.setDisable(true);
 						} catch (IOException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -236,7 +247,6 @@ public class Level1Controller extends Thread implements Initializable {
 
 	private void getQuestionNummer() {
 		randQuestion = (int) (Math.random() * 13 + 1);
-
 	}
 	
 	private void movePlayer() {
@@ -290,7 +300,7 @@ public class Level1Controller extends Thread implements Initializable {
 		animate.play();
 	}
 
-	// Hilfsmethode für die Translation mit Ladder
+	// Hilfsmethode fï¿½r die Translation mit Ladder
 	private void translatePlayerTo(int x, int y, ImageView b) {
 		// TODO Auto-generated method stub
 		TranslateTransition animate = new TranslateTransition(Duration.millis(1000), b);
@@ -480,19 +490,19 @@ public class Level1Controller extends Thread implements Initializable {
 						rightResult = (line.substring(CORRECT_ANSWER_INDICATOR.length()));
 					}
 					if (line.startsWith(CHOICE1_INDICATOR)) {
-						choice1.setText(line.substring(CHOICE1_INDICATOR.length()));
+						answerABtn.setText(line.substring(CHOICE1_INDICATOR.length()));
 
 					}
 					if (line.startsWith(CHOICE2_INDICATOR)) {
-						choice2.setText(line.substring(CHOICE2_INDICATOR.length()));
+						answerBBtn.setText(line.substring(CHOICE2_INDICATOR.length()));
 
 					}
 					if (line.startsWith(CHOICE3_INDICATOR)) {
-						choice3.setText(line.substring(CHOICE3_INDICATOR.length()));
+						answerCBtn.setText(line.substring(CHOICE3_INDICATOR.length()));
 
 					}
 					if (line.startsWith(CHOICE4_INDICATOR)) {
-						choice4.setText(line.substring(CHOICE4_INDICATOR.length()));
+						answerDBtn.setText(line.substring(CHOICE4_INDICATOR.length()));
 
 					}
 
@@ -504,59 +514,53 @@ public class Level1Controller extends Thread implements Initializable {
 	}
 
 	@FXML
-	public String selectActionHandle(ActionEvent event) throws IOException {
-		RadioButton selectedRadio = (RadioButton) questionRadioGroup.getSelectedToggle();
-		System.out.println(selectedRadio.getText());
-		return selectedRadio.getText();
+	public void selectActionHandle(ActionEvent event) throws IOException {
+		goOnBtn.setDisable(false);
+		String selectedAnswer = ((Button) event.getSource()).getText();
+		if (isResultRight(selectedAnswer, this.rightResult)) {
+			((Button) event.getSource()).setStyle("-fx-background-color:#7fff00");
+			punkte += 5;
+			aktPunkte.setText(String.valueOf(punkte));
+		} else {
+			if(answerABtn.getText().equals(this.rightResult)) {
+				answerABtn.setStyle("-fx-background-color:#7fff00");
+			} else if (answerBBtn.getText().equals(this.rightResult)) {
+				answerBBtn.setStyle("-fx-background-color:#7fff00");
+			} else if (answerCBtn.getText().equals(this.rightResult)) {
+				answerCBtn.setStyle("-fx-background-color:#7fff00");
+			} else {
+				answerDBtn.setStyle("-fx-background-color:#7fff00");
+			}
+
+
+			((Button) event.getSource()).setStyle("-fx-background-color:#dc143c");
+			punkte -= 5;
+			aktPunkte.setText(String.valueOf(punkte));
+		}
+
 	}
 	
 	public boolean isResultRight(String result, String rightResult) {
 		return (result == rightResult || result.equals(rightResult));
 	}
 
-	@FXML
-	public void submitActionHandle(ActionEvent event) throws IOException {
-
-		frage.setDisable(true);
-		choice1.setDisable(true);
-		choice2.setDisable(true);
-		choice3.setDisable(true);
-		choice4.setDisable(true);
-		showResult.setVisible(true);
-		submitBtn.setDisable(true);
-		goOnBtn.setDisable(false);
-
-		String right = "Korrekt! Sie haben 5 Punkte erhalten.";
-		String falsch = "Falsch. Leider 5 Punkte werden ausgezogen.";
-		if (isResultRight(selectActionHandle(event), this.rightResult)) {
-			showResult.setText(right);
-			punkte += 5;
-			aktPunkte.setText(String.valueOf(punkte));
-		} else {
-			showResult.setText(falsch);
-			punkte -= 5;
-			aktPunkte.setText(String.valueOf(punkte));
-		}
-
-		// akualisiern Score im Aufgaben-Fenster
-
-	}
 
 	@FXML
 	public void goOnClickHandle(ActionEvent event) throws IOException {
 		fragesFenster.setVisible(false);
 		frage.setDisable(false);
-		choice1.setDisable(false);
-		choice2.setDisable(false);
-		choice3.setDisable(false);
-		choice4.setDisable(false);
-		choice1.setSelected(false);
-		choice2.setSelected(false);
-		choice3.setSelected(false);
-		choice4.setSelected(false);
-		showResult.setVisible(false);
-		submitBtn.setDisable(false);
-		goOnBtn.setDisable(true);
+		answerABtn.setDisable(false);
+		answerABtn.setStyle(null);
+
+		answerBBtn.setDisable(false);
+		answerBBtn.setStyle(null);
+
+		answerCBtn.setDisable(false);
+		answerCBtn.setStyle(null);
+
+		answerDBtn.setDisable(false);
+		answerDBtn.setStyle(null);
+
 		score.setText(String.valueOf(punkte));
 	}
 }

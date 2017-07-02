@@ -48,13 +48,7 @@ public class SingleChoiceLv1Controller implements Initializable{
 
     public String rightResult = "choice 3";
 
-    
 
-
-//    @FXML
-//    public void initialize() {
-//        frage.setText("????");
-//    }
     public void setPosition(int p) {
         this.position = p;
     }
