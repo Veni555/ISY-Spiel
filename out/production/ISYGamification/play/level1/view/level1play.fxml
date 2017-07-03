@@ -42,9 +42,7 @@
 					<VBox.margin>
 						<Insets bottom="50.0" left="30.0" top="30.0" />
 					</VBox.margin>
-					<image>
-						<Image url="/img/dahm.png" />
-					</image>
+					
 				</ImageView>
 				<Label fx:id="random" text="0">
 					<VBox.margin>
@@ -116,7 +114,7 @@
 			layoutX="0" layoutY="0" pickOnBounds="true" preserveRatio="true"
 			visible="false">
 			<image>
-				<Image url="/img/student.png" />
+				<Image url="/img/student1.png" />
 			</image>
 		</ImageView>
 

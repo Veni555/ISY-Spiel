@@ -38,6 +38,8 @@ public class Level1Controller extends Thread implements Initializable {
 	@FXML
 	private ImageView dice;
 	@FXML
+	private ImageView dahm;
+	@FXML
 	private ImageView student;
 	@FXML
 	public Label score;
@@ -125,10 +127,10 @@ public class Level1Controller extends Thread implements Initializable {
 
 		student.setTranslateX(50);
 		student.setTranslateY(600);
-
+		
 		gameStart = true;
 		student.setVisible(true);
-
+		start.setText("Neustarten");
 	}
 
 	public void throwDiceBtnClick(ActionEvent event) throws IOException, InterruptedException {
@@ -461,6 +463,8 @@ public class Level1Controller extends Thread implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		frage.setWrapText(true);
+		Image image = new Image("img/dahm.gif");
+		dahm.setImage(image);
 	}
 
 	public void setPosition(int p) {
