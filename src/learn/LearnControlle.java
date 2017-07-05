@@ -8,7 +8,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 
 /**
  * Created by Administrator on 22.05.2017.
@@ -27,6 +29,9 @@ public class LearnControlle {
 
     @FXML
     public void playLevel2BtnClick(ActionEvent event) throws IOException {
+//        URL url = new File("/play/level2/view/level2play.fxml.fxml").toURL();
+//        FXMLLoader loader = new FXMLLoader(url);
+//        Parent parent = loader.load();
         switschScene("/play/level2/view/level2play.fxml", event);
     }
 
