@@ -94,7 +94,7 @@
 					</VBox.margin>
 				</HBox>
 				
-				<Button id="next" disable="true" mnemonicParsing="false"
+				<Button id="next" disable="false" mnemonicParsing="false"
 					onAction="#nextLevelBtnClick" style="-fx-pref-width: 120; -fx-pref-height: 40;"
 					text="Next Level">
 					<VBox.margin>

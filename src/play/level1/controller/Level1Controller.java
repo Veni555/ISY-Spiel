@@ -47,20 +47,6 @@ public class Level1Controller extends Thread implements Initializable {
 	public int punkt;
 	@FXML
 	public Label frage;
-//	@FXML
-//	public RadioButton choice1;
-//	@FXML
-//	private RadioButton choice2;
-//	@FXML
-//	private RadioButton choice3;
-//	@FXML
-//	private RadioButton choice4;
-//	@FXML
-//	private ToggleGroup questionRadioGroup;
-//	@FXML
-//	private Text showResult;
-//	@FXML
-//	private Button submitBtn;
 
 	@FXML
 	private Button answerABtn;
@@ -105,6 +91,7 @@ public class Level1Controller extends Thread implements Initializable {
 	// Position von Spieler
 
 	public boolean gameStart = false;
+
 	public void switschScene(String path, ActionEvent event) throws IOException {
 		Parent pa = FXMLLoader.load(getClass().getResource(path));
 		Scene scene2 = new Scene(pa);
@@ -230,7 +217,7 @@ public class Level1Controller extends Thread implements Initializable {
 							e.printStackTrace();
 						}
 						fragesFenster.setVisible(true);
-						System.out.println("popup");
+//						System.out.println("popup");
 					}
 
 				});
@@ -452,6 +439,7 @@ public class Level1Controller extends Thread implements Initializable {
 	}
 
 	public void nextLevelBtnClick(ActionEvent event) throws IOException {
+		switschScene("/learn/level2learn.fxml", event);
 
 	}
 

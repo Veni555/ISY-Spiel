@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="learn.LearnControlle">
+    <top>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Leve1: Gestaltgesetze" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="Calibri Bold" size="36.0" />
+            </font>
+            <BorderPane.margin>
+                <Insets bottom="10.0" top="30.0" />
+            </BorderPane.margin>
+        </Text>
+    </top>
+    <center>
+        <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <content>
+                <AnchorPane focusTraversable="true" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="920.0">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <children>
+                        <TextFlow layoutX="25.0" prefHeight="601.0" prefWidth="897.0" style="-fx-pref-width: 920; -fx-pref-height: 600;" AnchorPane.leftAnchor="40.0">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inhalte hier" textAlignment="JUSTIFY" wrappingWidth="912.6796875">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </TextFlow>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </center>
+    <bottom>
+        <HBox alignment="TOP_CENTER" prefHeight="65.0" prefWidth="1000.0" style="-fx-pref-height: 65;" BorderPane.alignment="CENTER">
+            <children>
+                <Button alignment="CENTER" mnemonicParsing="false" onAction="#toStartBtnClick" style="-fx-pref-width: 120; -fx-pref-height: 40;" text="Zurück">
+                    <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets right="340.0" top="5.0" />
+                    </HBox.margin>
+                </Button>
+                <Button alignment="CENTER" mnemonicParsing="false" style="-fx-pref-width: 120; -fx-pref-height: 40;" text="Spielen" onAction="#playLevel2BtnClick">
+                    <font>
+                        <Font name="Calibri Bold" size="18.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="340.0" top="5.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

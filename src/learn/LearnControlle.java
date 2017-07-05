@@ -20,8 +20,14 @@ public class LearnControlle {
         switschScene("/start/start.fxml", event);
     }
 
+    @FXML
     public void playLevel1BtnClick(ActionEvent event) throws IOException {
         switschScene("/play/level1/view/level1play.fxml", event);
+    }
+
+    @FXML
+    public void playLevel2BtnClick(ActionEvent event) throws IOException {
+        switschScene("/play/level2/view/level2play.fxml", event);
     }
 
     public void switschScene(String path, ActionEvent event) throws IOException {
