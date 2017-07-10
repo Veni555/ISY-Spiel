@@ -36,17 +36,23 @@ public class Level1Controller extends Thread implements Initializable {
 	@FXML
 	private Label random;
 	@FXML
+	private Label ergebnis;
+
+	@FXML
 	private ImageView dice;
 	@FXML
 	private ImageView dahm;
+	@FXML
+	private ImageView questionImg;
 	@FXML
 	private ImageView student;
 	@FXML
 	public Label score;
 	@FXML
-	private Button getPunkteBtn;
+	public Button next;
+	@FXML
+	public Button back;
 
-	public int punkt;
 	@FXML
 	public Label frage;
 
@@ -60,13 +66,14 @@ public class Level1Controller extends Thread implements Initializable {
 	private Button answerDBtn;
 	@FXML
 	private Button goOnBtn;
-	@FXML
-	public Label aktPunkte;
+
 	@FXML
 	public VBox fragesFenster;
+	@FXML
+	public VBox ergebnisFenster;
 
 	public int punkte;
-	public String rightResult = "choice 3";
+	public String rightResult;
 
 	// public Circle player;
 	public static final int Tile_Size_width = 160;
@@ -80,7 +87,6 @@ public class Level1Controller extends Thread implements Initializable {
 	public boolean playerTurn = true;
 	public int cirPos[][] = new int[5][5];
 	public int leadderPos[][] = new int[6][3];
-	
 
 	// Position von Spieler
 	public static int playerXPosition = 50;
@@ -114,13 +120,15 @@ public class Level1Controller extends Thread implements Initializable {
 
 		student.setTranslateX(50);
 		student.setTranslateY(600);
-		
+		rand = 0;
 		gameStart = true;
 		student.setVisible(true);
 		start.setText("Neustarten");
+		throwDice.setDisable(false);
 	}
 
 	public void throwDiceBtnClick(ActionEvent event) throws IOException, InterruptedException {
+
 		if (gameStart) {
 			if (playerTurn) {
 				Image image = new Image("img/wuerfel_0013.gif");
@@ -136,36 +144,29 @@ public class Level1Controller extends Thread implements Initializable {
 						try {
 
 							sleep(1000);
-
-							if (rand == 1) {
-
-								Image image1 = new Image("img/1.png");
-								dice.setImage(image1);
+							Image image1 = null;
+							switch (rand) {
+							case 1:
+								image1 = new Image("img/1.png");
+								break;
+							case 2:
+								image1 = new Image("img/2.png");
+								break;
+							case 3:
+								image1 = new Image("img/3.png");
+								break;
+							case 4:
+								image1 = new Image("img/4.png");
+								break;
+							case 5:
+								image1 = new Image("img/5.png");
+								break;
+							case 6:
+								image1 = new Image("img/6.png");
+								break;
 							}
-							if (rand == 2) {
-								Image image1 = new Image("img/2.png");
-								dice.setImage(image1);
-							}
-							if (rand == 3) {
+							dice.setImage(image1);
 
-								Image image1 = new Image("img/3.png");
-								dice.setImage(image1);
-							}
-							if (rand == 4) {
-
-								Image image1 = new Image("img/4.png");
-								dice.setImage(image1);
-							}
-							if (rand == 5) {
-
-								Image image1 = new Image("img/5.png");
-								dice.setImage(image1);
-							}
-							if (rand == 6) {
-
-								Image image1 = new Image("img/6.png");
-								dice.setImage(image1);
-							}
 							movePlayer();
 
 							translatePlayerTo(playerXPosition, playerYPosition, student);
@@ -193,6 +194,12 @@ public class Level1Controller extends Thread implements Initializable {
 								playerXPosition = 690;
 								playerYPosition = 300;
 							}
+							if (playerXPosition > 690 || playerYPosition < 0) {
+								// fragesFenster.setVisible(false);
+							}
+							if (playerXPosition == 690 && playerYPosition == 0) {
+								// fragesFenster.setVisible(false);
+							}
 							playerTurn = true;
 
 						} catch (InterruptedException e) {
@@ -212,14 +219,93 @@ public class Level1Controller extends Thread implements Initializable {
 					@Override
 					public void run() {
 						try {
+
+							if (randQuestion >= 16 && randQuestion <= 18) {
+								questionImg.setVisible(true);
+								
+								questionImg.setFitHeight(200.0);
+								Image img = null;
+								if (randQuestion == 16) {
+									questionImg.setFitWidth(250.0);
+									img = new Image("img/diagramm.png");
+									questionImg.setImage(img);
+								}
+								if (randQuestion == 17) {
+									questionImg.setFitWidth(400.0);
+									img = new Image("img/bild2frage.png");
+									questionImg.setImage(img);
+								}
+
+								if (randQuestion == 18) {
+									questionImg.setFitWidth(200.0);
+									img = new Image("img/hermann.jpg");
+									questionImg.setImage(img);
+								}
+								answerABtn.setVisible(true);
+								answerBBtn.setVisible(true);
+								answerCBtn.setVisible(true);
+								answerDBtn.setVisible(true);
+								goOnBtn.setDisable(true);
+							} else {
+								questionImg.setFitWidth(10.0);
+								questionImg.setFitHeight(10.0);
+								Image img1 = new Image("img/leer.png");
+								questionImg.setImage(img1);
+								if (randQuestion == 19 || randQuestion == 20) {
+
+									answerABtn.setVisible(false);
+									answerBBtn.setVisible(false);
+									answerCBtn.setVisible(false);
+									answerDBtn.setVisible(false);
+									goOnBtn.setDisable(false);
+									punkte += 2;
+								} else {
+
+									answerABtn.setVisible(true);
+									answerBBtn.setVisible(true);
+									answerCBtn.setVisible(true);
+									answerDBtn.setVisible(true);
+									goOnBtn.setDisable(true);
+								}
+
+							}
 							setFragen(randQuestion);
-							goOnBtn.setDisable(true);
+
 						} catch (IOException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-						fragesFenster.setVisible(true);
-//						System.out.println("popup");
+						if (playerXPosition > 690 || playerYPosition < 0) {
+							fragesFenster.setVisible(false);
+							ergebnisFenster.setVisible(true);
+							buttonsOff();
+							if (punkte >= 15) {
+								ergebnis.setText("Ausgezeichnet! Jetzt kannst du weiter mit dem Thema Kommunikation spielen!");
+							} else {
+
+								ergebnis.setText("Leider musst den Level wiederholen!");
+
+							}
+
+						}
+						if (playerXPosition == 690 && playerYPosition == 0) {
+							fragesFenster.setVisible(false);
+							ergebnisFenster.setVisible(true);
+							buttonsOff();
+							if (punkte >= 15) {
+
+								ergebnis.setText("Ausgezeichnet! Jetzt kannst du weiter mit dem Thema Kommunikation spielen!");
+
+							}else {
+
+								ergebnis.setText("Leider musst den Level wiederholen!");
+
+							}
+						} else {
+							buttonsOff();
+							fragesFenster.setVisible(true);
+							// System.out.println("popup");
+						}
 					}
 
 				});
@@ -235,9 +321,9 @@ public class Level1Controller extends Thread implements Initializable {
 	}
 
 	private void getQuestionNummer() {
-		randQuestion = (int) (Math.random() * 13 + 1);
+		randQuestion = (int) (Math.random() * 20 + 1);
 	}
-	
+
 	private void movePlayer() {
 		for (int i = 0; i < rand; i++) {
 			if (posCir % 2 == 1) {
@@ -271,6 +357,7 @@ public class Level1Controller extends Thread implements Initializable {
 				gameStart = false;
 				playerTurn = false;
 				rand = 0;
+
 			}
 
 		}
@@ -298,135 +385,8 @@ public class Level1Controller extends Thread implements Initializable {
 		animate.setToY(y);
 		animate.setAutoReverse(false);
 		animate.play();
-		this.position = getPositionNummer(x, y);
+
 	}
-
-	// Positionsnummer zurueckgeben.
-	int getPositionNummer(int x, int y) {
-		switch (x) {
-		case 50:
-			switch (y) {
-			case 0:
-				position = 20;
-				break;
-
-			case 150:
-				position = 19;
-				break;
-
-			case 300:
-				position = 10;
-				break;
-
-			case 450:
-				position = 9;
-				break;
-			}
-			break;
-
-		case 210:
-			switch (y) {
-			case 0:
-				position = 21;
-				break;
-
-			case 150:
-				position = 18;
-				break;
-
-			case 300:
-				position = 11;
-				break;
-
-			case 450:
-				position = 8;
-				break;
-
-			case 600:
-				position = 1;
-				break;
-			}
-			break;
-
-		case 370:
-			switch (y) {
-			case 0:
-				position = 22;
-				break;
-
-			case 150:
-				position = 17;
-				break;
-
-			case 300:
-				position = 12;
-				break;
-
-			case 450:
-				position = 7;
-				break;
-			case 600:
-				position = 2;
-				break;
-			}
-			break;
-
-		case 530:
-			switch (y) {
-			case 0:
-				position = 23;
-				break;
-
-			case 150:
-				position = 16;
-				break;
-
-			case 300:
-				position = 13;
-				break;
-
-			case 450:
-				position = 6;
-				break;
-			case 600:
-				position = 3;
-				break;
-			}
-			break;
-
-		case 690:
-			switch (y) {
-			// case 0:
-			// position = 20;
-			// break;
-
-			case 150:
-				position = 15;
-				break;
-
-			case 300:
-				position = 14;
-				break;
-
-			case 450:
-				position = 5;
-				break;
-
-			case 600:
-				position = 4;
-				break;
-			}
-			break;
-		}
-
-		setPosition(position);
-
-	
-
-		return position;
-	}
-
-	
 
 	// Timer fuer Pop-up Frage Fenster
 	public static void setTimeout(Runnable runnable, int delay) {
@@ -445,21 +405,27 @@ public class Level1Controller extends Thread implements Initializable {
 
 	}
 
-	
-
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
+		ergebnis.setWrapText(true);
 		frage.setWrapText(true);
 		Image image = new Image("img/dahm.gif");
 		dahm.setImage(image);
+
 	}
 
-	public void setPosition(int p) {
-		this.position = p;
+	public void buttonsOff() {
+		throwDice.setDisable(true);
+		start.setDisable(true);
+		back.setDisable(true);
 	}
 
-	
+	public void buttonsOn() {
+		throwDice.setDisable(false);
+		start.setDisable(false);
+		back.setDisable(false);
+	}
 
 	public void setFragen(int nummer) throws IOException {
 
@@ -502,19 +468,19 @@ public class Level1Controller extends Thread implements Initializable {
 
 			}
 		}
-
 	}
 
 	@FXML
 	public void selectActionHandle(ActionEvent event) throws IOException {
+
 		goOnBtn.setDisable(false);
 		String selectedAnswer = ((Button) event.getSource()).getText();
 		if (isResultRight(selectedAnswer, this.rightResult)) {
 			((Button) event.getSource()).setStyle("-fx-background-color:#7fff00");
 			punkte += 5;
-			aktPunkte.setText(String.valueOf(punkte));
+
 		} else {
-			if(answerABtn.getText().equals(this.rightResult)) {
+			if (answerABtn.getText().equals(this.rightResult)) {
 				answerABtn.setStyle("-fx-background-color:#7fff00");
 			} else if (answerBBtn.getText().equals(this.rightResult)) {
 				answerBBtn.setStyle("-fx-background-color:#7fff00");
@@ -524,18 +490,16 @@ public class Level1Controller extends Thread implements Initializable {
 				answerDBtn.setStyle("-fx-background-color:#7fff00");
 			}
 
-
 			((Button) event.getSource()).setStyle("-fx-background-color:#dc143c");
 			punkte -= 5;
-			aktPunkte.setText(String.valueOf(punkte));
+
 		}
 
 	}
-	
+
 	public boolean isResultRight(String result, String rightResult) {
 		return (result == rightResult || result.equals(rightResult));
 	}
-
 
 	@FXML
 	public void goOnClickHandle(ActionEvent event) throws IOException {
@@ -554,5 +518,30 @@ public class Level1Controller extends Thread implements Initializable {
 		answerDBtn.setStyle(null);
 
 		score.setText(String.valueOf(punkte));
+		start.setDisable(false);
+		throwDice.setDisable(false);
+		back.setDisable(false);
+	}
+
+	@FXML
+	public void okClickHandle(ActionEvent event) throws IOException {
+		ergebnisFenster.setVisible(false);
+		
+		if (punkte >= 15) {
+			buttonsOn();
+			next.setDisable(false);
+		} else {
+			punkte=0;
+			playerXPosition = 50;
+			playerYPosition = 600;
+
+			student.setTranslateX(50);
+			student.setTranslateY(600);
+			
+			gameStart = true;
+			start.setText("Neustarten");
+			buttonsOn();
+			score.setText(String.valueOf(punkte));
+		}
 	}
 }
