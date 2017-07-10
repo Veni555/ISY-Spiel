@@ -11,7 +11,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("start.fxml"));
-        primaryStage.setTitle("MCI lernen, Spa√ü machen");
+        primaryStage.setTitle("MCI mit Spaﬂ lernen!");
         primaryStage.setScene(new Scene(root, 1000, 750));
         primaryStage.show();
     }
