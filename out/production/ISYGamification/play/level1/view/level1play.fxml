@@ -32,7 +32,7 @@
 					<VBox.margin>
 						<Insets bottom="50.0" left="30.0" top="30.0" />
 					</VBox.margin>
-					
+
 				</ImageView>
 				<Label fx:id="random" text="0">
 					<VBox.margin>
@@ -58,7 +58,7 @@
 						<Insets bottom="40.0" left="40.0" right="20.0" top="30.0" />
 					</VBox.margin>
 				</Button>
-				
+
 				<HBox alignment="CENTER" prefHeight="53.0" prefWidth="200.0">
 					<children>
 						<Label text="Score:">
@@ -78,18 +78,18 @@
 					<VBox.margin>
 						<Insets top="-20.0" />
 					</VBox.margin>
-					
+
 				</HBox>
 				<Button fx:id="next" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#nextLevelBtnClick" style="-fx-pref-width: 120; -fx-pref-height: 40;" text="Nächster Level">
 					<font>
 						<Font name="Calibri Bold" size="18.0" />
 					</font>
-					
+
 					<VBox.margin>
 						<Insets bottom="40.0" left="40.0" right="20.0" top="30.0" />
 					</VBox.margin>
 				</Button>
-				
+
 			</children>
 		</VBox>
 		<ImageView id="spielbrett" fitHeight="750.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
@@ -103,134 +103,161 @@
 			</image>
 		</ImageView>
 
-        <VBox fx:id="fragesFenster" layoutX="0.0" layoutY="0.0" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: White;" visible="false">
-            <children>
-                <Label fx:id="frage" alignment="BOTTOM_LEFT" contentDisplay="LEFT" prefHeight="90.0" prefWidth="563.0" text="Frage">
-                    <font>
-                        <Font size="18.0" fx:id="x1" />
-                    </font>
-                    <VBox.margin>
-                        <Insets bottom="5.0" left="60.0" top="30.0" />
-                    </VBox.margin>
-                </Label>
-            <ImageView fx:id="questionImg" fitHeight="0.0" fitWidth="0.0" visible="false" >
-                <VBox.margin>
-                        <Insets bottom="10.0" left="60.0" top="10.0" />
-                    </VBox.margin>
-                    </ImageView>
-                <Button fx:id="answerABtn" alignment="CENTER_LEFT" font="$x1" mnemonicParsing="false" onAction="#selectActionHandle" prefHeight="60.0" prefWidth="500.0" text="Button"  >
-                    <VBox.margin>
-                        <Insets bottom="10.0" left="60.0" top="10.0" fx:id="x2" />
-                    </VBox.margin>
-                </Button>
-                <Button fx:id="answerBBtn" alignment="CENTER_LEFT" font="$x1" mnemonicParsing="false" onAction="#selectActionHandle" prefHeight="60.0" prefWidth="500.0" text="Button" VBox.margin="$x2" />
-                <Button fx:id="answerCBtn" alignment="CENTER_LEFT" font="$x1" mnemonicParsing="false" onAction="#selectActionHandle" prefHeight="60.0" prefWidth="500.0" text="Button" VBox.margin="$x2" />
-                <Button fx:id="answerDBtn" alignment="CENTER_LEFT" font="$x1" mnemonicParsing="false" onAction="#selectActionHandle" prefHeight="60.0" prefWidth="500.0" text="Button" VBox.margin="$x2" />
-                <Button fx:id="goOnBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goOnClickHandle" prefHeight="40.0" prefWidth="120.0" text="Weiter" disable="true">
-                    <font>
-                        <Font name="System Bold" size="20.0" />
-                    </font>
-                    <VBox.margin>
-                        <Insets left="520.0" top="40.0" bottom="10.0" />
-                    </VBox.margin>
-                </Button>
-            </children>
-        </VBox>
-        <VBox fx:id="ergebnisFenster" alignment="CENTER" layoutX="9.0" layoutY="244.0" prefHeight="300.0" prefWidth="795.0" style="-fx-background-color: White;" visible="false">
-            <children>
-                <Label fx:id="ergebnis" alignment="CENTER" contentDisplay="CENTER" lineSpacing="2.0" minWidth="-Infinity" prefHeight="141.0" prefWidth="753.0" text="Ausgezeichnet! Jetzt kannst du weiter mit dem Thema Kommunikation spielen!" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
-         <font>
-            <Font name="AngsanaUPC" size="35.0" />
-         </font>
-               <VBox.margin>
-                  <Insets left="20.0" right="20.0" top="100.0" />
-               </VBox.margin>
-      </Label>
-                
-                <Button fx:id="okBtn" alignment="CENTER" contentDisplay="CENTER" onAction="#okClickHandle" text="OK">
-                    <font>
-                        <Font name="System Bold" size="20.0" />
-                    </font>
-                    <VBox.margin>
-                        <Insets bottom="10.0" left="600.0" top="100.0" />
-                    </VBox.margin>
-               <opaqueInsets>
-                  <Insets left="500.0" />
-               </opaqueInsets>
-                </Button>
-            </children>
-        </VBox>
-      
-     
+		<Pane fx:id="fragesFenster" prefHeight="700.0" prefWidth="800.0" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="30.0">
+			<children>
+				<ImageView fitHeight="707.0" fitWidth="795.0">
+					<image>
+						<Image url="@../../../img/board.png" />
+					</image>
+				</ImageView>
+
+				<VBox prefHeight="700.0" prefWidth="800.0">
+					<children>
+						<Label fx:id="frage" alignment="BASELINE_LEFT" contentDisplay="LEFT" prefHeight="125.0" prefWidth="608.0" text="Frage" textAlignment="JUSTIFY" textFill="#fff8f8">
+							<font>
+								<Font size="18.0" fx:id="x1" />
+							</font>
+							<VBox.margin>
+								<Insets bottom="-20.0" left="50.0" top="70.0" />
+							</VBox.margin>
+						</Label>
+						<ImageView fx:id="questionImg" fitHeight="0.0" fitWidth="0.0" visible="false">
+							<VBox.margin>
+								<Insets bottom="10.0" left="60.0" top="10.0" />
+							</VBox.margin>
+						</ImageView>
+						<Button fx:id="answerABtn" alignment="CENTER_LEFT" font="$x1" mnemonicParsing="false" onAction="#selectActionHandle" prefHeight="60.0" prefWidth="500.0" text="Button">
+							<VBox.margin>
+								<Insets bottom="10.0" left="60.0" top="10.0" fx:id="x2" />
+							</VBox.margin>
+						</Button>
+						<Button fx:id="answerBBtn" alignment="CENTER_LEFT" font="$x1" mnemonicParsing="false" onAction="#selectActionHandle" prefHeight="60.0" prefWidth="500.0" text="Button" VBox.margin="$x2" />
+						<Button fx:id="answerCBtn" alignment="CENTER_LEFT" font="$x1" mnemonicParsing="false" onAction="#selectActionHandle" prefHeight="60.0" prefWidth="500.0" text="Button" VBox.margin="$x2" />
+						<Button fx:id="answerDBtn" alignment="CENTER_LEFT" font="$x1" mnemonicParsing="false" onAction="#selectActionHandle" prefHeight="60.0" prefWidth="500.0" text="Button" VBox.margin="$x2" />
+						<Button fx:id="goOnBtn" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#goOnClickHandle" prefHeight="40.0" prefWidth="120.0" text="Weiter">
+							<font>
+								<Font name="System Bold" size="20.0" />
+							</font>
+							<VBox.margin>
+								<Insets bottom="10.0" left="520.0" top="40.0" />
+							</VBox.margin>
+						</Button>
+					</children>
+					<padding>
+						<Insets left="50.0" />
+					</padding>
+				</VBox>
+			</children>
+		</Pane>
+
+		<Pane fx:id="ergebnisFenster" prefHeight="340.0" prefWidth="680.0" visible="false" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="250.0">
+			<children>
+				<ImageView fitHeight="378.0" fitWidth="717.0">
+					<image>
+						<Image url="@../../../img/ergebnis.png" />
+					</image>
+				</ImageView>
+
+				<VBox alignment="CENTER_LEFT" prefHeight="300.0" prefWidth="550.0">
+					<children>
+						<Label fx:id="ergebnis" alignment="BASELINE_LEFT" lineSpacing="2.0" minWidth="-Infinity" prefHeight="300.0" prefWidth="450.0" text="Ausgezeichnet! Jetzt kannst du weiter mit dem Thema Kommunikation spielen!" textAlignment="CENTER" textFill="#282b2f" wrapText="true" VBox.vgrow="ALWAYS">
+							<font>
+								<Font name="Lucida Sans Regular" size="28.0" />
+							</font>
+							<VBox.margin>
+								<Insets bottom="20.0" left="60.0" right="20.0" top="80.0" />
+							</VBox.margin>
+						</Label>
+
+						<Button fx:id="okBtn" alignment="CENTER" contentDisplay="CENTER" onAction="#okClickHandle" prefHeight="80.0" prefWidth="100.0" text="OK">
+							<font>
+								<Font name="System Bold" size="20.0" />
+							</font>
+							<VBox.margin>
+								<Insets bottom="10.0" left="400.0" />
+							</VBox.margin>
+							<opaqueInsets>
+								<Insets left="500.0" />
+							</opaqueInsets>
+						</Button>
+					</children>
+					<padding>
+						<Insets bottom="-30.0" left="50.0" right="-100.0" top="80.0" />
+					</padding>
+				</VBox>
+			</children>
+		</Pane>
+
+
 
 		<!--<VBox fx:id="fragesFenster" alignment="CENTER_LEFT" layoutX="113.0"-->
-			<!--layoutY="65.0" prefHeight="500.0" prefWidth="800.0"-->
-			<!--style="-fx-background-color: White;" visible="false">-->
-			<!--<children>-->
-				<!--<Label fx:id="frage" text="Frage">-->
-					<!--<font>-->
-						<!--<Font size="18.0" />-->
-					<!--</font>-->
+		<!--layoutY="65.0" prefHeight="500.0" prefWidth="800.0"-->
+		<!--style="-fx-background-color: White;" visible="false">-->
+		<!--<children>-->
+		<!--<Label fx:id="frage" text="Frage">-->
+		<!--<font>-->
+		<!--<Font size="18.0" />-->
+		<!--</font>-->
 
-				<!--</Label>-->
-				<!--<RadioButton fx:id="choice1" mnemonicParsing="false"-->
-					<!--onAction="#selectActionHandle" text="choice 1">-->
-					<!--<font>-->
-						<!--<Font size="18.0" />-->
-					<!--</font>-->
-					<!--<toggleGroup>-->
-						<!--<ToggleGroup fx:id="questionRadioGroup" />-->
-					<!--</toggleGroup>-->
+		<!--</Label>-->
+		<!--<RadioButton fx:id="choice1" mnemonicParsing="false"-->
+		<!--onAction="#selectActionHandle" text="choice 1">-->
+		<!--<font>-->
+		<!--<Font size="18.0" />-->
+		<!--</font>-->
+		<!--<toggleGroup>-->
+		<!--<ToggleGroup fx:id="questionRadioGroup" />-->
+		<!--</toggleGroup>-->
 
-				<!--</RadioButton>-->
-				<!--<RadioButton fx:id="choice2" mnemonicParsing="false"-->
-					<!--onAction="#selectActionHandle" text="choice 2" toggleGroup="$questionRadioGroup">-->
-					<!--<font>-->
-						<!--<Font size="18.0" />-->
-					<!--</font>-->
+		<!--</RadioButton>-->
+		<!--<RadioButton fx:id="choice2" mnemonicParsing="false"-->
+		<!--onAction="#selectActionHandle" text="choice 2" toggleGroup="$questionRadioGroup">-->
+		<!--<font>-->
+		<!--<Font size="18.0" />-->
+		<!--</font>-->
 
-				<!--</RadioButton>-->
-				<!--<RadioButton fx:id="choice3" mnemonicParsing="false"-->
-					<!--onAction="#selectActionHandle" text="choice 3" toggleGroup="$questionRadioGroup">-->
-					<!--<font>-->
-						<!--<Font size="18.0" />-->
-					<!--</font>-->
+		<!--</RadioButton>-->
+		<!--<RadioButton fx:id="choice3" mnemonicParsing="false"-->
+		<!--onAction="#selectActionHandle" text="choice 3" toggleGroup="$questionRadioGroup">-->
+		<!--<font>-->
+		<!--<Font size="18.0" />-->
+		<!--</font>-->
 
-				<!--</RadioButton>-->
-				<!--<RadioButton fx:id="choice4" mnemonicParsing="false"-->
-					<!--onAction="#selectActionHandle" text="choice 4" toggleGroup="$questionRadioGroup">-->
-					<!--<font>-->
-						<!--<Font size="18.0" />-->
-					<!--</font>-->
-				<!--</RadioButton>-->
-				<!--<HBox alignment="BOTTOM_RIGHT" prefHeight="164.0" prefWidth="630.0">-->
-					<!--<children>-->
-						<!--<Text fx:id="showResult" strokeType="OUTSIDE" strokeWidth="0.0"-->
-							<!--wrappingWidth="429.9140625">-->
-							<!--<font>-->
-								<!--<Font name="System Bold" size="28.0" />-->
-							<!--</font>-->
-						<!--</Text>-->
-						<!--<Button fx:id="submitBtn" alignment="CENTER" defaultButton="true"-->
-							<!--mnemonicParsing="false" onAction="#submitActionHandle"-->
-							<!--prefHeight="34.0" prefWidth="128.0" style="-fx-pref-width: 90;"-->
-							<!--text="Submit">-->
-							<!--<font>-->
-								<!--<Font name="Calibri Bold" size="18.0" />-->
-							<!--</font>-->
-						<!--</Button>-->
-						<!--<Button fx:id="goOnBtn" alignment="CENTER" disable="true"-->
-							<!--mnemonicParsing="false" onAction="#goOnClickHandle" style="-fx-pref-width: 90;"-->
-							<!--text="Weiter">-->
-							<!--<font>-->
-								<!--<Font name="Calibri Bold" size="18.0" />-->
-							<!--</font>-->
+		<!--</RadioButton>-->
+		<!--<RadioButton fx:id="choice4" mnemonicParsing="false"-->
+		<!--onAction="#selectActionHandle" text="choice 4" toggleGroup="$questionRadioGroup">-->
+		<!--<font>-->
+		<!--<Font size="18.0" />-->
+		<!--</font>-->
+		<!--</RadioButton>-->
+		<!--<HBox alignment="BOTTOM_RIGHT" prefHeight="164.0" prefWidth="630.0">-->
+		<!--<children>-->
+		<!--<Text fx:id="showResult" strokeType="OUTSIDE" strokeWidth="0.0"-->
+		<!--wrappingWidth="429.9140625">-->
+		<!--<font>-->
+		<!--<Font name="System Bold" size="28.0" />-->
+		<!--</font>-->
+		<!--</Text>-->
+		<!--<Button fx:id="submitBtn" alignment="CENTER" defaultButton="true"-->
+		<!--mnemonicParsing="false" onAction="#submitActionHandle"-->
+		<!--prefHeight="34.0" prefWidth="128.0" style="-fx-pref-width: 90;"-->
+		<!--text="Submit">-->
+		<!--<font>-->
+		<!--<Font name="Calibri Bold" size="18.0" />-->
+		<!--</font>-->
+		<!--</Button>-->
+		<!--<Button fx:id="goOnBtn" alignment="CENTER" disable="true"-->
+		<!--mnemonicParsing="false" onAction="#goOnClickHandle" style="-fx-pref-width: 90;"-->
+		<!--text="Weiter">-->
+		<!--<font>-->
+		<!--<Font name="Calibri Bold" size="18.0" />-->
+		<!--</font>-->
 
-						<!--</Button>-->
-					<!--</children>-->
+		<!--</Button>-->
+		<!--</children>-->
 
-				<!--</HBox>-->
-			<!--</children>-->
+		<!--</HBox>-->
+		<!--</children>-->
 		<!--</VBox>-->
 	</children>
 </AnchorPane>

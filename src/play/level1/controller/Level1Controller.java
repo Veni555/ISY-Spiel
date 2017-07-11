@@ -23,6 +23,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -68,9 +69,9 @@ public class Level1Controller extends Thread implements Initializable {
 	private Button goOnBtn;
 
 	@FXML
-	public VBox fragesFenster;
+	public Pane fragesFenster;
 	@FXML
-	public VBox ergebnisFenster;
+	public Pane ergebnisFenster;
 
 	public int punkte;
 	public String rightResult;
