@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="play.level1.controller.Level1Controller">
+<AnchorPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="play.level2.controller.Level2Controller">
 	<children>
 		<VBox alignment="CENTER_LEFT" layoutX="823.0" layoutY="-1.0" prefHeight="750.0" prefWidth="200.0">
 			<children>
@@ -94,7 +94,7 @@
 		</VBox>
 		<ImageView id="spielbrett" fitHeight="750.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
 			<image>
-				<Image url="/img/Level1.jpg" />
+				<Image url="/img/Level2.jpg" />
 			</image>
 		</ImageView>
 		<ImageView fx:id="student" fitHeight="142.0" fitWidth="125.0" layoutX="0" layoutY="0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">

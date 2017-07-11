@@ -170,28 +170,28 @@ public class Level2Controller extends Thread implements Initializable {
 							movePlayer();
 
 							translatePlayerTo(playerXPosition, playerYPosition, student);
-							if (playerXPosition == 370 && playerYPosition == 600) {
+							if (playerXPosition == 530 && playerYPosition == 300) {
 
-								translatePlayer(370, 600, 530, 300, student);
-								playerXPosition = 530;
-								playerYPosition = 300;
+								translatePlayer(530, 300, 370, 600, student);
+								playerXPosition = 370;
+								playerYPosition = 600;
 							}
-							if (playerXPosition == 210 && playerYPosition == 300) {
+							if (playerXPosition == 370 && playerYPosition == 450) {
 
-								translatePlayer(210, 300, 50, 0, student);
-								playerXPosition = 50;
-								playerYPosition = 0;
-							}
-							if (playerXPosition == 370 && playerYPosition == 150) {
-
-								translatePlayer(370, 150, 210, 450, student);
+								translatePlayer(370, 450, 210, 150, student);
 								playerXPosition = 210;
-								playerYPosition = 450;
+								playerYPosition = 150;
+							}
+							if (playerXPosition == 690 && playerYPosition == 300) {
+
+								translatePlayer(690, 300, 530, 0, student);
+								playerXPosition = 530;
+								playerYPosition = 0;
 							}
 							if (playerXPosition == 530 && playerYPosition == 0) {
 
-								translatePlayer(530, 0, 690, 300, student);
-								playerXPosition = 690;
+								translatePlayer(210, 0, 50, 300, student);
+								playerXPosition = 50;
 								playerYPosition = 300;
 							}
 							if (playerXPosition > 690 || playerYPosition < 0) {
@@ -412,7 +412,7 @@ public class Level2Controller extends Thread implements Initializable {
 		frage.setWrapText(true);
 		Image image = new Image("img/dahm.gif");
 		dahm.setImage(image);
-
+        
 	}
 
 	public void buttonsOff() {

@@ -117,7 +117,7 @@ public class Level1Controller extends Thread implements Initializable {
 	public void playStartBtnClick(ActionEvent event) throws IOException {
 		playerXPosition = 50;
 		playerYPosition = 600;
-punkte=0;
+		punkte=0;
 		student.setTranslateX(50);
 		student.setTranslateY(600);
 		rand = 0;
@@ -126,6 +126,7 @@ punkte=0;
 		start.setText("Neustarten");
 		throwDice.setDisable(false);
 		score.setText(String.valueOf(punkte));
+		next.setDisable(false);
 	}
 
 	public void throwDiceBtnClick(ActionEvent event) throws IOException, InterruptedException {
