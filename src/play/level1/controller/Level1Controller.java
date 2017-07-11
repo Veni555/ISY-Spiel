@@ -225,22 +225,24 @@ public class Level1Controller extends Thread implements Initializable {
 
 							if (randQuestion >= 16 && randQuestion <= 18) {
 								questionImg.setVisible(true);
-								
-								questionImg.setFitHeight(200.0);
+
 								Image img = null;
 								if (randQuestion == 16) {
-									questionImg.setFitWidth(250.0);
-									img = new Image("img/diagramm.png");
+									questionImg.setFitHeight(130.0);
+									questionImg.setFitWidth(185.0);
+									img = new Image("img/diagramm.jpg");
 									questionImg.setImage(img);
 								}
 								if (randQuestion == 17) {
-									questionImg.setFitWidth(400.0);
+									questionImg.setFitHeight(120.0);
+									questionImg.setFitWidth(240.0);
 									img = new Image("img/bild2frage.png");
 									questionImg.setImage(img);
 								}
 
 								if (randQuestion == 18) {
-									questionImg.setFitWidth(200.0);
+									questionImg.setFitHeight(120.0);
+									questionImg.setFitWidth(120.0);
 									img = new Image("img/hermann.jpg");
 									questionImg.setImage(img);
 								}
@@ -256,6 +258,7 @@ public class Level1Controller extends Thread implements Initializable {
 								questionImg.setImage(img1);
 								if (randQuestion == 19 || randQuestion == 20) {
 
+									frage.setPrefHeight(200.0);
 									answerABtn.setVisible(false);
 									answerBBtn.setVisible(false);
 									answerCBtn.setVisible(false);
@@ -263,7 +266,7 @@ public class Level1Controller extends Thread implements Initializable {
 									goOnBtn.setDisable(false);
 									punkte += 2;
 								} else {
-
+									frage.setPrefHeight(125.0);
 									answerABtn.setVisible(true);
 									answerBBtn.setVisible(true);
 									answerCBtn.setVisible(true);

@@ -20,30 +20,30 @@
     <children>
         <HBox alignment="BASELINE_CENTER" prefHeight="111.0" prefWidth="1000.0">
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Leve1: Gestaltgesetze">
+                <ImageView fitHeight="60.0" fitWidth="179.0">
+                    <image>
+                        <Image url="@../img/level2titel.png" />
+                    </image>
                     <HBox.margin>
-                        <Insets top="40.0" />
+                        <Insets top="5.0" />
                     </HBox.margin>
-                    <font>
-                        <Font name="System Bold" size="24.0" />
-                    </font>
-                </Text>
+                </ImageView>
             </children>
             <VBox.margin>
-                <Insets />
+                <Insets bottom="10.0" />
             </VBox.margin></HBox>
         <HBox prefHeight="640.0" prefWidth="1000.0">
             <children>
-                <ScrollPane prefHeight="550.0" prefWidth="960.0">
+                <ScrollPane prefHeight="603.0" prefWidth="909.0">
                     <content>
-                        <ImageView fitHeight="3736.0" fitWidth="941.0">
+                        <ImageView fitHeight="3131.0" fitWidth="872.0">
                             <image>
                                 <Image url="@../img/lernenlv2.jpg" />
                             </image>
                         </ImageView>
                     </content>
                     <HBox.margin>
-                        <Insets left="20.0" right="20.0" />
+                        <Insets left="45.0" right="20.0" />
                     </HBox.margin>
                 </ScrollPane>
             </children>
