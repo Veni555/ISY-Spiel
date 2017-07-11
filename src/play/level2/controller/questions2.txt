@@ -1,0 +1,81 @@
+1.Welcher von den folgenden Begriffen beschreibt eine Kommunikationsebe?
+1*praktische Ebene
+1$semantische Ebene
+1@grammatische Ebene
+1&alle drei
+1+semantische Ebene
+2.Welcher von den folgenden Begriffen beschreibt eine Kommunikationsebe?
+2*pragmatische Ebene
+2$sensorische Ebene
+2@grammatische Ebene
+2&alle drei
+2+pragmatische Ebene
+3.Welcher von den folgenden Begriffen beschreibt eine Kommunikationsebe?
+3*pragmatische Ebene
+3$semantische Ebene
+3@syntaktische Ebene
+3&alle drei
+3+alle drei
+4.Die semantische Ebene beschäftigt sich mit ___ ?
+4*der Bedeutung der Zeichne und der Symbole 
+4$der Grammatik und der Struktur der Kommunikation
+4@den dynamischen Vorgängen der Kommunikation
+4&alle drei
+4+der Bedeutung der Zeichne und der Symbole
+5.Die Syntax beschreibt ___ ?
+5*die Grammatik und der Struktur der Kommunikation
+5$die dynamischen Vorgängen der Kommunikation
+5@die Reglen, die die Zeichen und Symbole sinvoll machen
+5&alle drei
+5+die Reglen, die die Zeichen und Symbole sinvoll machen
+6.Fehlermeldungen sind eine Art von Kommunikation zwischen der Maschine und dem Benutzer. Welche Umsetzungen von Informationsermittlung wären an der Stelle sinnvoll?
+6*lange Beschreibungen mit der genauen Erklärung der Problems und allen möglichen Ursachen
+6$eine Fehlermeldung voller technisch speziffischen Begriffen
+6@kurze Beschreibung des Problems mit eventuellem Lösungsvorschlag
+6&gar keine Rückmeldung
+6+kurze Beschreibung des Problems mit eventuellem Lösungsvorschlag
+7.Fehlermeldungen sind eine Art von Kommunikation zwischen der Maschine und dem Benutzer. Welche Umsetzungen von Informationsermittlung wären an der Stelle  sinnvoll?
+7*lange Beschreibungen mit der genauen Erklärung der Problems und allen möglichen Ursachen
+7$ein festgelegtes Fragen-Antwort-Spiel, das beim Lösen oder Identifizieren des Problems hilft
+7@eine Fehlermeldung voller technisch speziffischen Begriffen
+7&gar keine Rückmeldung
+7+ein festgelegtes Fragen-Antwort-Spiel, das beim Lösen oder Identifizieren des Problems hilft
+8."Function Follows Form" bedeutet, dass ___ .
+8*die Bedeutung von Icons und Symbole ist kontextabhängig
+8$die Bedeutung von Icons und Symbole ist immer selbstverständlich
+8@die Bedeutung von Icons und Symbole muss allein von ihrem Aussehen eindeutig sein
+8&das Aussehen der Icons und Symbole hat wenig mit ihrer Bedutung zu tun
+8+die Bedeutung von Icons und Symbole muss allein von ihrem Aussehen eindeutig sein
+9.Nicht alle Icons und Symbole, die verwendet werden, sind den Nutzern bekannt. Um die Bedeutung dieser Elemente klarar zu machen, könnte man an der Stelle sinvoll ___ .
+9*Fehlermeldungen
+9$Tool Tips
+9@Pop Up Windows
+9&eine Liste mit Erklärungen aller in der Anwendung benutzten Icons und Symbole verwenden
+9+Tool Tips
+10.Um die Kommunikation zwischen Mensch und Maschine zu optimieren kann mann sinvoll ___ .
+10*immer lange erklärende Texte anwenden
+10$immer nur bildliche Elemente wie Icons und Symbole benutzen
+10@immer Lautsignale als Informationsermittler umsetzen
+10&eine Mischung von kurzen verständlichen Texten und eindeutigen Icons und Symbolen verwenden
+10+eine Mischung von kurzen verständlichen Texten und eindeutigen Icons und Symbolen verwenden
+11.Die pragmatische Ebene der Kommunikation beschäftig sich mit ___ .
+11*der statischen Aspekten der Kommunikation
+11$mit den dynamischen Aspekten der Kommunikation
+11@mit den statischen und den dynamischen Aspekten der Kommunikation
+11&der Bedeutung von Symblen in verschiedenen kulturellen Kontexten 
+11+mit den dynamischen Aspekten der Kommunikation
+12.Welche von den folgenden Implementierunge könnte man als Lösungen auf der pragmatischen Ebene verstehen ___ ?
+12*ein Software-Assistent, der mittels festgestelltem Fragen-Antwort-Spiel, den Nutzer navigiert
+12$Tooltips, die die Bedeuting von umgesetzten Symbolen und Icons erklärt
+12@Implementierungen auf der pragmatischen Ebene sind schwer zu getalten und daher auch unerwünscht
+12&Icons, die spezifisch auf ihre Funktion deuten
+12+ein Software-Assistent, der mittels festgestelltem Fragen-Antwort-Spiel, den Nutzer navigiert
+13.Welche von den Folgenden Beispielen könnte man als Verstoß gegen den Axiomen der Kommuinikation von Watzlawick verstehen?
+13*"Möchten Sie wirklich diesen Beitrag löschen?" + "Ok" und "Cancel" Option
+13$"Falsch!Falsch!Falsch!""
+13@"Ein Fehler ist aufgetreten. Starten Sie bitte das Programm neu."
+13&eine langsame Internetverbingung 
+13+"Falsch!Falsch!Falsch!"
+14.Ein Interactive-Voice-Response-System (ein System, das die vom Nutzer angegebenen Daten/Infos wiederholt und um einer Bestätigung vom Nutzer wartet, bevor die Interaktion fortgesetzt werden darf) ist eine Implementierung von Kommunikation zwische Mensch und Maschine auf der pragmatischen Ebene.
+15.zu der syntaktischen Ebene der Kommunikation gehören die festgelegte Anzahl und Art der Zeichen und Symbolen, die Grammatik oder auch die Lichtsignale, die die Kommunikation zwischen Sender und Empfänger ermöglichen.
+

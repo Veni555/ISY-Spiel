@@ -23,6 +23,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -68,9 +69,9 @@ public class Level2Controller extends Thread implements Initializable {
 	private Button goOnBtn;
 
 	@FXML
-	public VBox fragesFenster;
+	public Pane fragesFenster;
 	@FXML
-	public VBox ergebnisFenster;
+	public Pane ergebnisFenster;
 
 	public int punkte;
 	public String rightResult;
@@ -219,56 +220,27 @@ public class Level2Controller extends Thread implements Initializable {
 					@Override
 					public void run() {
 						try {
+							questionImg.setFitWidth(10.0);
+							questionImg.setFitHeight(10.0);
+							Image img1 = new Image("img/leer.png");
+							questionImg.setImage(img1);
+							if (randQuestion == 14 || randQuestion == 15) {
 
-							if (randQuestion >= 16 && randQuestion <= 18) {
-								questionImg.setVisible(true);
-								
-								questionImg.setFitHeight(200.0);
-								Image img = null;
-								if (randQuestion == 16) {
-									questionImg.setFitWidth(250.0);
-									img = new Image("img/diagramm.png");
-									questionImg.setImage(img);
-								}
-								if (randQuestion == 17) {
-									questionImg.setFitWidth(400.0);
-									img = new Image("img/bild2frage.png");
-									questionImg.setImage(img);
-								}
+								answerABtn.setVisible(false);
+								answerBBtn.setVisible(false);
+								answerCBtn.setVisible(false);
+								answerDBtn.setVisible(false);
+								goOnBtn.setDisable(false);
+								punkte += 2;
+							} else {
 
-								if (randQuestion == 18) {
-									questionImg.setFitWidth(200.0);
-									img = new Image("img/hermann.jpg");
-									questionImg.setImage(img);
-								}
 								answerABtn.setVisible(true);
 								answerBBtn.setVisible(true);
 								answerCBtn.setVisible(true);
 								answerDBtn.setVisible(true);
 								goOnBtn.setDisable(true);
-							} else {
-								questionImg.setFitWidth(10.0);
-								questionImg.setFitHeight(10.0);
-								Image img1 = new Image("img/leer.png");
-								questionImg.setImage(img1);
-								if (randQuestion == 19 || randQuestion == 20) {
-
-									answerABtn.setVisible(false);
-									answerBBtn.setVisible(false);
-									answerCBtn.setVisible(false);
-									answerDBtn.setVisible(false);
-									goOnBtn.setDisable(false);
-									punkte += 2;
-								} else {
-
-									answerABtn.setVisible(true);
-									answerBBtn.setVisible(true);
-									answerCBtn.setVisible(true);
-									answerDBtn.setVisible(true);
-									goOnBtn.setDisable(true);
-								}
-
 							}
+
 							setFragen(randQuestion);
 
 						} catch (IOException e) {
@@ -435,7 +407,7 @@ public class Level2Controller extends Thread implements Initializable {
 		String CHOICE3_INDICATOR = nummer + "@";
 		String CHOICE4_INDICATOR = nummer + "&";
 		String QUESTION_SEPARATOR = nummer + ".";
-		FileInputStream questionFile = new FileInputStream("src/play/level1/controller/questions.txt");
+		FileInputStream questionFile = new FileInputStream("src/play/level2/controller/questions2.txt");
 		BufferedReader br = new BufferedReader(new InputStreamReader(questionFile, "UTF-8"));
 
 		String line;
