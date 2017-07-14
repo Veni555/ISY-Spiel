@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
@@ -10,25 +11,23 @@
 
 <AnchorPane fx:id="help1Content" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tutorial.HelpControlle">
    <children>
-      <HBox alignment="CENTER" layoutX="250.0" layoutY="622.0" prefHeight="100.0" prefWidth="200.0" style="-fx-pref-width: 500;">
-         <children>
-            <Button disable="true" mnemonicParsing="false" style="-fx-pref-width: 120; -fx-pref-height: 40;" text="Back">
-               <HBox.margin>
-                  <Insets right="100.0" />
-               </HBox.margin>
-            </Button>
-            <Button defaultButton="true" mnemonicParsing="false" style="-fx-pref-width: 120; -fx-pref-height: 40;" text="Next" onAction="#nextBtnClick1">
-               <HBox.margin>
-                  <Insets left="100.0" />
-               </HBox.margin>
-            </Button>
-         </children>
-      </HBox>
-      <Button layoutX="833.0" layoutY="43.0" mnemonicParsing="false" style="-fx-pref-width: 120; -fx-pref-height: 40;" text="Back to Start"  onAction="#backToStartBtnClick"/>
-      <Text layoutX="51.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Page1" wrappingWidth="135.7958984375">
+      <ImageView fitHeight="750.0" fitWidth="1000.0" layoutY="-1.0">
+         <image>
+            <Image url="@../img/tutorial0.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="831.0" layoutY="674.0" mnemonicParsing="false" onAction="#backToStartBtnClick" style="-fx-pref-width: 140; -fx-pref-height: 40;" text="Zurück auf Start">
          <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button defaultButton="true" layoutX="921.0" layoutY="371.0" mnemonicParsing="false" onAction="#nextBtnClick1" style="-fx-pref-width: 50; -fx-pref-height: 40;">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="28.0">
+               <image>
+                  <Image url="@../img/right.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

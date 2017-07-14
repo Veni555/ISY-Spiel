@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
@@ -8,12 +9,26 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="start.StartControlle" fx:id="startPage">
+<AnchorPane fx:id="startPage" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="start.StartControlle">
    <children>
-      <VBox layoutX="621.0" layoutY="312.0" prefHeight="200.0" prefWidth="100.0" style="-fx-pref-width: 200; -fx-pref-height: 200;">
+      <ImageView fitHeight="762.0" fitWidth="1010.0">
+         <image>
+            <Image url="@../img/start.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="166.0" fitWidth="369.0" layoutX="98.0" layoutY="88.0">
+         <image>
+            <Image url="@../img/titel1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="118.0" fitWidth="562.0" layoutX="203.0" layoutY="254.0">
+         <image>
+            <Image url="@../img/titel2.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="673.0" layoutY="436.0" prefHeight="200.0" prefWidth="100.0" style="-fx-pref-width: 200; -fx-pref-height: 200;">
          <children>
-            <Button alignment="BASELINE_CENTER" mnemonicParsing="false" style="-fx-pref-width: 190; -fx-pref-height: 60;" text="Start" textAlignment="CENTER" onAction="#startBtnClick">
+            <Button alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#startBtnClick" style="-fx-pref-width: 190; -fx-pref-height: 60;" text="Start" textAlignment="CENTER">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -24,12 +39,17 @@
                   <Insets bottom="60.0" />
                </VBox.margin>
             </Button>
-            <Button alignment="BASELINE_CENTER" mnemonicParsing="false" style="-fx-pref-width: 190; -fx-pref-height: 60;" text="Hilfe" textAlignment="CENTER" onAction="#helpBtnClick">
+            <Button alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#helpBtnClick" style="-fx-pref-width: 190; -fx-pref-height: 60;" text="Hilfe" textAlignment="CENTER">
                <font>
                   <Font name="Calibri Bold" size="32.0" />
                </font>
             </Button>
          </children>
       </VBox>
+      <ImageView fitHeight="174.0" fitWidth="430.0" layoutX="105.0" layoutY="436.0">
+         <image>
+            <Image url="@../img/logo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

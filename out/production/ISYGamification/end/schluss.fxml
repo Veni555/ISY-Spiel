@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="end.SchlussControlle">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1000.0">
+         <image>
+            <Image url="@../img/end.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="538.0" fitWidth="558.0" layoutX="230.0" layoutY="200.0">
+         <image>
+            <Image url="@../img/Turntable.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="turnGif" fitHeight="538.0" fitWidth="558.0" layoutX="230.0" layoutY="200.0">
+         <image>
+
+         </image>
+      </ImageView>
+      <Label layoutX="500.0" layoutY="350.0" onMouseClicked="#clickHandler" AnchorPane.leftAnchor="455.0" AnchorPane.rightAnchor="435.0" AnchorPane.topAnchor="445.0">
+         <font>
+            <Font size="35.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="51.0" fitWidth="115.0">
+               <image>
+                  <Image url="@../img/click.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <ImageView fitHeight="79.0" fitWidth="395.0" layoutX="291.0" layoutY="35.0">
+         <image>
+            <Image url="@../img/congratulation.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="110.0" fitWidth="666.0" layoutX="172.0" layoutY="108.0">
+         <image>
+            <Image url="@../img/geschenk.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

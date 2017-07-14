@@ -76,18 +76,18 @@
 13@Bewegungsparallaxe
 13&Tiefenschärfe
 13+Bewegungsparallaxe
-14.Der Sternhimmel: Folgendes Phänomen ist am nächtlichen Sternhimmel zu beobachten: wenn man versucht einen besonders schwach sichtbaren Stern zu fixiern, verschwindet er. Wenn man aber daneben blickt, taucht er wieder auf. Eine Erklärung dafür wäre, dass..
-14*Die Zapfen weniger empfindlich als die Stäbchen sind
-14$Die Zapfen empfindlicher als die Stäbchen sind
-14@Es eine Stelle gibt, an der der Sehnerv in die Netzhaut austritt und da sich keine Rezeptoren befinden: der s.g. blinde Fleck
-14&Die Adaption des Auges ducrh die mittlere Helligkeit des gesamten Blickfelds bestimmt wird
-14+Die Zapfen weniger empfindlich als die Stäbchen sind
+14.Der Sternhimmel: Folgendes Phänomen ist am nächtlichen Sternhimmel zu beobachten: wenn man versucht einen besonders schwach sichtbaren Stern zu fixiern, verschwindet er. Wenn man aber daneben blickt, taucht er wieder auf. Eine Erklärung dafür wäre, dass ____ .
+14*die Zapfen weniger empfindlich als die Stäbchen sind
+14$die Zapfen empfindlicher als die Stäbchen sind
+14@der s.g. blinde Fleck
+14&Adaption des Auges ducrh mittlere Helligkeit des gesamten Blickfelds bestimmt wird
+14+die Zapfen weniger empfindlich als die Stäbchen sind
 15.Wahrnehmungsfehler wie der Simultankontrast oder der Hemann-Gitter sind oft zu betrachten. Bei denen wedren Farben oder Graustufen, die gleich sind, als verschieden wahrgenommen, oder es werden Objekte gesehen, die gar nicht da sind. Diese Phänomene kann man mit _____ erklären. 
 15*dem Mach´sche Bänder 
 15$der Dreifarbentheorie
-15@der Vorverarbeitung der wahrgenomenen Bildern von der Netzhaut, bevor sie ins Gehirn kommen
-15&der fehlender Fähigkeit des menschlichen Auges, direkt nebeneinanderligende Farben zu unterscheiden
-15+der Vorverarbeitung der wahrgenomenen Bildern von der Netzhaut, bevor sie ins Gehirn kommen
+15@der Vorverarbeitung der wahrgenomenen Bildern von der Netzhaut, bevor ins Gehirn kommen
+15&der fehlende Fähigkeit des Auges, direkt nebeneinanderligende Farben zu unterscheiden
+15+der Vorverarbeitung der wahrgenomenen Bildern von der Netzhaut, bevor ins Gehirn kommen
 16.In der Grafik ist die relative Empfindlichkeit der Rezeptortypen des menschlichen Auge gezeigt.Welche Reihenfolge entspricht die richtige Wellenlänge? 
 16*.Grün 2.Blau 3.Rot
 16$Grün 2.Rot 3.Blau

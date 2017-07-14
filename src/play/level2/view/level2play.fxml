@@ -114,9 +114,6 @@
 				<VBox prefHeight="700.0" prefWidth="800.0">
 					<children>
 						<Label fx:id="frage" alignment="BASELINE_LEFT" contentDisplay="LEFT" prefHeight="125.0" prefWidth="608.0" text="Frage" textAlignment="JUSTIFY" textFill="#fff8f8">
-							<font>
-								<Font size="18.0" fx:id="x1" />
-							</font>
 							<VBox.margin>
 								<Insets bottom="-20.0" left="50.0" top="70.0" />
 							</VBox.margin>
@@ -126,14 +123,26 @@
 								<Insets bottom="10.0" left="60.0" top="10.0" />
 							</VBox.margin>
 						</ImageView>
-						<Button fx:id="answerABtn" alignment="CENTER_LEFT" font="$x1" mnemonicParsing="false" onAction="#selectActionHandle" prefHeight="60.0" prefWidth="500.0" text="Button">
+						<Button fx:id="answerABtn" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#selectActionHandle" prefHeight="60.0" prefWidth="545.0" text="Button">
 							<VBox.margin>
 								<Insets bottom="10.0" left="60.0" top="10.0" fx:id="x2" />
 							</VBox.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
 						</Button>
-						<Button fx:id="answerBBtn" alignment="CENTER_LEFT" font="$x1" mnemonicParsing="false" onAction="#selectActionHandle" prefHeight="60.0" prefWidth="500.0" text="Button" VBox.margin="$x2" />
-						<Button fx:id="answerCBtn" alignment="CENTER_LEFT" font="$x1" mnemonicParsing="false" onAction="#selectActionHandle" prefHeight="60.0" prefWidth="500.0" text="Button" VBox.margin="$x2" />
-						<Button fx:id="answerDBtn" alignment="CENTER_LEFT" font="$x1" mnemonicParsing="false" onAction="#selectActionHandle" prefHeight="60.0" prefWidth="500.0" text="Button" VBox.margin="$x2" />
+						<Button fx:id="answerBBtn" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#selectActionHandle" prefHeight="60.0" prefWidth="545.0" text="Button" VBox.margin="$x2">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Button>
+						<Button fx:id="answerCBtn" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#selectActionHandle" prefHeight="60.0" prefWidth="545.0" text="Button" VBox.margin="$x2">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Button>
+						<Button fx:id="answerDBtn" alignment="CENTER_LEFT" mnemonicParsing="false" onAction="#selectActionHandle" prefHeight="60.0" prefWidth="545.0" text="Button" VBox.margin="$x2">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Button>
 						<Button fx:id="goOnBtn" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#goOnClickHandle" prefHeight="40.0" prefWidth="120.0" text="Weiter">
 							<font>
 								<Font name="System Bold" size="20.0" />

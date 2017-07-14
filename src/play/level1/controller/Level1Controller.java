@@ -1,5 +1,6 @@
 package play.level1.controller;
 
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -18,8 +19,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -28,6 +27,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import javafx.geometry.Insets;
 
 public class Level1Controller extends Thread implements Initializable {
 	@FXML
@@ -67,6 +67,8 @@ public class Level1Controller extends Thread implements Initializable {
 	private Button answerDBtn;
 	@FXML
 	private Button goOnBtn;
+	@FXML
+	private Insets goOnBtnMargin;
 
 	@FXML
 	public Pane fragesFenster;
@@ -232,12 +234,22 @@ public class Level1Controller extends Thread implements Initializable {
 									questionImg.setFitWidth(185.0);
 									img = new Image("img/diagramm.jpg");
 									questionImg.setImage(img);
+									VBox.setMargin(goOnBtn,new Insets(-10, -400, 0, 480));
+									answerABtn.setPrefWidth(300.0);
+									answerBBtn.setPrefWidth(300.0);
+									answerCBtn.setPrefWidth(300.0);
+									answerDBtn.setPrefWidth(300.0);
 								}
 								if (randQuestion == 17) {
 									questionImg.setFitHeight(120.0);
 									questionImg.setFitWidth(240.0);
 									img = new Image("img/bild2frage.png");
 									questionImg.setImage(img);
+									VBox.setMargin(goOnBtn,new Insets(-10, -400, 0, 510));
+									answerABtn.setPrefWidth(300.0);
+									answerBBtn.setPrefWidth(300.0);
+									answerCBtn.setPrefWidth(300.0);
+									answerDBtn.setPrefWidth(300.0);
 								}
 
 								if (randQuestion == 18) {
@@ -245,6 +257,13 @@ public class Level1Controller extends Thread implements Initializable {
 									questionImg.setFitWidth(120.0);
 									img = new Image("img/hermann.jpg");
 									questionImg.setImage(img);
+									VBox.setMargin(goOnBtn,new Insets(-10, -400, 0, 510));
+									answerABtn.setPrefWidth(300.0);
+									answerBBtn.setPrefWidth(300.0);
+									answerCBtn.setPrefWidth(300.0);
+									answerDBtn.setPrefWidth(300.0);
+//									goOnBtnMargin.set(0, 400, 30, 0);
+
 								}
 								answerABtn.setVisible(true);
 								answerBBtn.setVisible(true);
@@ -252,6 +271,12 @@ public class Level1Controller extends Thread implements Initializable {
 								answerDBtn.setVisible(true);
 								goOnBtn.setDisable(true);
 							} else {
+								VBox.setMargin(goOnBtn,new Insets(20, 0, 10, 510));
+								answerABtn.setPrefWidth(520.0);
+								answerBBtn.setPrefWidth(520.0);
+								answerCBtn.setPrefWidth(520.0);
+								answerDBtn.setPrefWidth(520.0);
+
 								questionImg.setFitWidth(10.0);
 								questionImg.setFitHeight(10.0);
 								Image img1 = new Image("img/leer.png");
@@ -259,6 +284,7 @@ public class Level1Controller extends Thread implements Initializable {
 								if (randQuestion == 19 || randQuestion == 20) {
 
 									frage.setPrefHeight(200.0);
+									VBox.setMargin(goOnBtn,new Insets(-10, -400, 0, 510));
 									answerABtn.setVisible(false);
 									answerBBtn.setVisible(false);
 									answerCBtn.setVisible(false);
@@ -310,7 +336,6 @@ public class Level1Controller extends Thread implements Initializable {
 						} else {
 							buttonsOff();
 							fragesFenster.setVisible(true);
-							// System.out.println("popup");
 						}
 					}
 
@@ -500,6 +525,11 @@ public class Level1Controller extends Thread implements Initializable {
 			punkte -= 5;
 
 		}
+
+		answerABtn.setDisable(true);
+		answerBBtn.setDisable(true);
+		answerCBtn.setDisable(true);
+		answerDBtn.setDisable(true);
 
 	}
 

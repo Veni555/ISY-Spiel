@@ -17,7 +17,7 @@
 3&alle drei
 3+alle drei
 4.Die semantische Ebene beschäftigt sich mit ___ ?
-4*der Bedeutung der Zeichne und der Symbole 
+4*der Bedeutung der Zeichne und der Symbole
 4$der Grammatik und der Struktur der Kommunikation
 4@den dynamischen Vorgängen der Kommunikation
 4&alle drei
@@ -56,8 +56,8 @@
 10*immer lange erklärende Texte anwenden
 10$immer nur bildliche Elemente wie Icons und Symbole benutzen
 10@immer Lautsignale als Informationsermittler umsetzen
-10&eine Mischung von kurzen verständlichen Texten und eindeutigen Icons und Symbolen verwenden
-10+eine Mischung von kurzen verständlichen Texten und eindeutigen Icons und Symbolen verwenden
+10&Mischung von kurzen verständlichen Texten & eindeutigen Icons & Symbolen verwenden
+10+Mischung von kurzen verständlichen Texten & eindeutigen Icons & Symbolen verwenden
 11.Die pragmatische Ebene der Kommunikation beschäftig sich mit ___ .
 11*der statischen Aspekten der Kommunikation
 11$mit den dynamischen Aspekten der Kommunikation
@@ -65,11 +65,11 @@
 11&der Bedeutung von Symblen in verschiedenen kulturellen Kontexten 
 11+mit den dynamischen Aspekten der Kommunikation
 12.Welche von den folgenden Implementierunge könnte man als Lösungen auf der pragmatischen Ebene verstehen ___ ?
-12*ein Software-Assistent, der mittels festgestelltem Fragen-Antwort-Spiel, den Nutzer navigiert
+12*Software-Assistent, der mittels festgestelltem Fragen-Antwort-Spiel, den Nutzer navigiert
 12$Tooltips, die die Bedeuting von umgesetzten Symbolen und Icons erklärt
-12@Implementierungen auf der pragmatischen Ebene sind schwer zu getalten und daher auch unerwünscht
+12@Implementierung auf der pragmatischen Ebene sind schwer zu getalten und daher unerwünscht
 12&Icons, die spezifisch auf ihre Funktion deuten
-12+ein Software-Assistent, der mittels festgestelltem Fragen-Antwort-Spiel, den Nutzer navigiert
+12+Software-Assistent, der mittels festgestelltem Fragen-Antwort-Spiel, den Nutzer navigiert
 13.Welche von den Folgenden Beispielen könnte man als Verstoß gegen den Axiomen der Kommuinikation von Watzlawick verstehen?
 13*"Möchten Sie wirklich diesen Beitrag löschen?" + "Ok" und "Cancel" Option
 13$"Falsch!Falsch!Falsch!""
@@ -77,5 +77,5 @@
 13&eine langsame Internetverbingung 
 13+"Falsch!Falsch!Falsch!"
 14.Ein Interactive-Voice-Response-System (ein System, das die vom Nutzer angegebenen Daten/Infos wiederholt und um einer Bestätigung vom Nutzer wartet, bevor die Interaktion fortgesetzt werden darf) ist eine Implementierung von Kommunikation zwische Mensch und Maschine auf der pragmatischen Ebene.
-15.zu der syntaktischen Ebene der Kommunikation gehören die festgelegte Anzahl und Art der Zeichen und Symbolen, die Grammatik oder auch die Lichtsignale, die die Kommunikation zwischen Sender und Empfänger ermöglichen.
+15.Zu der syntaktischen Ebene der Kommunikation gehören die festgelegte Anzahl und Art der Zeichen und Symbolen, die Grammatik oder auch die Lichtsignale, die die Kommunikation zwischen Sender und Empfänger ermöglichen.
 

@@ -266,7 +266,12 @@ public class Level2Controller extends Thread implements Initializable {
 							buttonsOff();
 							if (punkte >= 15) {
 
-								ergebnis.setText("Ausgezeichnet! Jetzt kannst du weiter mit dem Thema Kommunikation spielen!");
+//								ergebnis.setText("Ausgezeichnet! Jetzt kannst du weiter mit dem Thema Kommunikation spielen!");
+								try {
+									switschScene("/end/schluss.fxml", event);
+								} catch (IOException e) {
+									e.printStackTrace();
+								}
 
 							}else {
 
@@ -467,6 +472,10 @@ public class Level2Controller extends Thread implements Initializable {
 
 		}
 
+		answerABtn.setDisable(true);
+		answerBBtn.setDisable(true);
+		answerCBtn.setDisable(true);
+		answerDBtn.setDisable(true);
 	}
 
 	public boolean isResultRight(String result, String rightResult) {
