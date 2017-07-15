@@ -298,7 +298,7 @@ public class Level2Controller extends Thread implements Initializable {
 	}
 
 	private void getQuestionNummer() {
-		randQuestion = (int) (Math.random() * 20 + 1);
+		randQuestion = (int) (Math.random() * 15 + 1);
 	}
 
 	private void movePlayer() {
