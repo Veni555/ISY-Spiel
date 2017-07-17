@@ -14,8 +14,8 @@
 3*Für das Sehen von Farben verantwortlich
 3$Nicht sehr empfindlich
 3@genau 3 Arten
-3&für die Graustufen verantwortlich
-3+für die Graustufen verantwortlich
+3&für die Unterscheidung von Graustufen verantwortlich
+3+für die Unterscheidung von Graustufen verantwortlich
 4.Die Zapfen, im Gegensatz zu den Stäbchen, sind ____ .
 4*für das Farbsehen verantwortlich
 4$durch eingebaute Farbpigmente für Rot, Grün und Gelb emfindlich
@@ -58,7 +58,7 @@
 10@der lateralen Hemmung
 10&des Tiefensehens
 10+der Ähnlichkeit
-11.Beim Hooveren jedes Objektes einer Menüliste  wächselt die Hintergrungfarbe des Objekts von Wieß auf Blau, um zu deuten, dass das Objekt anclickbar ist. Welches Getsaltgesetzt erklärt am besten dieses Benehmen?
+11.Die Objekte einer Menüliste  wächsen ihre Hintergrungfarbe von Wieß auf Blau, um zu deuten, dass das Objekt anclickbar ist. Welches Getsaltgesetzt erklärt am besten dieses Benehmen?
 11*der Nähe
 11$der Vertrautheit
 11@der guten Gestalt
@@ -85,9 +85,9 @@
 15.Wahrnehmungsfehler wie der Simultankontrast oder der Hemann-Gitter sind oft zu betrachten. Bei denen wedren Farben oder Graustufen, die gleich sind, als verschieden wahrgenommen, oder es werden Objekte gesehen, die gar nicht da sind. Diese Phänomene kann man mit _____ erklären. 
 15*dem Mach´sche Bänder 
 15$der Dreifarbentheorie
-15@der Vorverarbeitung der wahrgenomenen Bildern von der Netzhaut, bevor ins Gehirn kommen
-15&der fehlende Fähigkeit des Auges, direkt nebeneinanderligende Farben zu unterscheiden
-15+der Vorverarbeitung der wahrgenomenen Bildern von der Netzhaut, bevor ins Gehirn kommen
+15@Vorverarbeitung der wahrgenomenen Bildern von Netzhaut, bevor ins Gehirn kommen
+15&fehlende Fähigkeit des Auges, nebeneinanderligende Farben zu unterscheiden
+15+Vorverarbeitung der wahrgenomenen Bildern von Netzhaut, bevor ins Gehirn kommen
 16.In der Grafik ist die relative Empfindlichkeit der Rezeptortypen des menschlichen Auge gezeigt.Welche Reihenfolge entspricht die richtige Wellenlänge? 
 16*.Grün 2.Blau 3.Rot
 16$Grün 2.Rot 3.Blau
